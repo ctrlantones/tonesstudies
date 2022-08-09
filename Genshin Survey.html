@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">Genshin Impact Monthly Survey Form</h1>
+
+    <!-- Added class="text-center" and "description-text-center" to then make css element to align text to center. -->
+
+    <p id="description" class="description text-center">
+      Please help us to improve the quality of the game and future content by completing this short survey. We look forward to receiving your feedback.</p>
+  </header>
+
+  <form id="survey-form">
+    <div class="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+    </div>
+
+    <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required />
+    </div>
+
+    <div class="form-group">
+      <label id="number-label" for="number">Phone</label>
+      <input type="number" name="phone" id="number" min="0" max="9" class="form-control" placeholder="Enter your phone number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{5}" required />
+      <small> Format: 077-321-12345</small>
+    </div>
+
+    <div class="form-group">
+      <label id="Age-label" for="Age">Age</label>
+      <input type="number" name="age" id="Age-number" min="13" max="99" class="form-control" placeholder="Age" /> <span class="clue"> (Optional)</span>
+    </div>
+
+    <div class="form-group">
+      <p>Sex</p>
+      <select id="dropdown" name="Sex" class="form-control" required>
+        <option disabled selected value> Choose sex</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+        <option value="PreferNo">Prefer not to say</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>What type of gamer would you classify yourself as?</p>
+      <label>
+        <input name="gamer" value="beginner" type="radio" class="input-radio" checked />Complete Beginner, this is one of the first games i've played</label>
+
+      <label>
+        <input name="gamer" value="casual" type="radio" class="input-radio" />Play some games for fun/socially with friends</label>
+
+      <label>
+        <input name="gamer" value="competitive" type="radio" class="input-radio" />Play numerous games; especially enjoy online/ranked systems</label>
+
+      <label>
+        <input name="gamer" value="Hardcore" type="radio" class="input-radio" />Play many games for solo completion aswell as online systems</label>
+    </div>
+
+    <div class="form-group">
+      <p>How long on average do you play per week?</p>
+      <label>
+        <input name="playtime" value="rarely" type="radio" class="input-radio" checked />I don't play every week</label>
+
+      <label>
+        <input name="playtime" value="alittle" type="radio" class="input-radio" />1-3 hours per week</label>
+      <label>
+        <input name="playtime" value="fairamount" type="radio" class="input-radio" />3-8 hours per week</label>
+      <label>
+        <input name="playtime" value="alot" type="radio" class="input-radio" />8 Hours or more</label>
+    </div>
+
+    <div class="form-group">
+      <p>List your top 5 Genshin Impact Characters below:</p>
+      <textarea id="favourites" class="input-textarea" name="comment" placeholder="My top characters in Genshin Impact are..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <p> Do you currently play any of the following games? <span class="id"> (Check all that apply) </span> </p>
+      <label>
+        <input name="gamecollection" value="apexlegends" type="checkbox" class="input-checkbox" />Apex Legends</label>
+
+      <label>
+        <input name="gamecollection" value="fortnite" type="checkbox" class="input-checkbox" />Fortnite</label>
+
+      <label>
+        <input name="gamecollection" value="narakabladepoint" type="checkbox" class="input-checkbox" />Naraka Bladepoint</label>
+
+      <label>
+        <input name="gamecollection" value="forzahorizon5" type="checkbox" class="input-checkbox" />Forza Horizon 5</label>
+
+      <label>
+        <input name="gamecollection" value="leagueoflegends" type="checkbox" class="input-checkbox" />League of Legends</label>
+
+      <label>
+        <input name="gamecollection" value="haloinfinite" type="checkbox" class="input-checkbox" />Halo: Infinite</label>
+
+      <label>
+        <input name="gamecollection" value="fifa22" type="checkbox" class="input-checkbox" />Fifa 22</label>
+
+      <label>
+        <input name="gamecollection" value="illusionconnect" type="checkbox" class="input-checkbox" />Illusion Connect</label>
+    </div>
+
+    <div class="form-group">
+      <p>Would you recommend Genshin Impact to a friend or relative?</p>
+      <label>
+        <input name="recommend" value="definitely" type="radio" class="input-radio" checked />Definitely</label>
+
+      <label>
+        <input name="recommend" value="mostlikely" type="radio" class="input-radio" />Most Likely</label>
+
+      <label>
+        <input name="recommend" value="maybe" type="radio" class="input-radio" />Maybe</label>
+
+      <label>
+        <input name="recommend" value="unlikely" type="radio" class="input-radio" />Unlikely</label>
+
+      <label>
+        <input name="recommend" value="never" type="radio" class="input-radio" />Never</label>
+    </div>
+
+    <!--
+Radio buttons>>
+can a required instruction be added to radio buttons by doing required in the lavel or div? and does checked go in ideal box or all?
+-->
+
+    <div class="form-group">
+      <p>Any additional comments?</p>
+      <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">Submit
+      </button>
+    </div>
+  </form>
+</div>
